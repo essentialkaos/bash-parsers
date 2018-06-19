@@ -3,7 +3,7 @@ SHORT_ARGS=""
 MERGEABLE_ARGS=""
 KEEP_ARGS=true
 
-## ARGUMENTS PARSING 3 #################################################################
+## ARGUMENTS PARSING 4 #################################################################
 
 [[ $# -eq 0 ]] && main && exit $?
 
@@ -100,6 +100,6 @@ done
 
 unset arg argn argm argk
 
-[[ -n "$KEEP_ARGS" ]] && main $argv || main ${argt:1:9999}
+[[ -n "$KEEP_ARGS" ]] && main $argv || main ${argt:1}
 
 ########################################################################################
