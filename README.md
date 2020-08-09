@@ -1,4 +1,4 @@
-# `bash-parsers` [![License](https://gh.kaos.io/ekol.svg)](https://essentialkaos.com/ekol)
+# `bash-parsers`
 
 A collection of bash code snippets used in different projects.
 
@@ -10,4 +10,4 @@ A collection of bash code snippets used in different projects.
 
 #### License
 
-[EKOL](https://essentialkaos.com/ekol)
+[Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
