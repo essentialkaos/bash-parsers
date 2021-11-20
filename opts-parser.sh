@@ -103,7 +103,6 @@ while [[ -n "$1" ]] ; do
   fi
 
   optt="$optt $1" ; shift
-
 done
 
 [[ -n "$optn" ]] && declare "$optn=true"
