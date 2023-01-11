@@ -34,7 +34,7 @@ cronPatternMatch() {
 
     if [[ "$pattern" == "!" ]] ; then
       [[ $(echo "${date}%${postfix}" | bc) == "0" ]] && echo 1 && return 0
-    elif [[ `echo "$prefix" | grep "-"` ]] ; then
+    elif [[ -n $(echo "$prefix" | grep "-") ]] ; then
       if [[ $date -ge ${prefix%-*} && $date -le ${prefix#*-} ]] ; then
         [[ $(echo "${date}%${postfix}" | bc) == "0" ]] && echo 1 && return 0
       fi

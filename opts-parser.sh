@@ -7,7 +7,6 @@ KEEP_OPTS=true
 
 if [[ $# -eq 0 ]] ; then
   main
-  exit $?
 fi
 
 unset opt optn optm optv optt optk
