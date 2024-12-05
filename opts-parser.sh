@@ -3,7 +3,7 @@ SHORT_OPTS=""
 MERGEABLE_OPTS=""
 KEEP_OPTS=true
 
-## OPTIONS PARSING 5 ###########################################################
+## OPTIONS PARSING 6 ###########################################################
 
 if [[ $# -eq 0 ]] ; then
   main
@@ -11,7 +11,7 @@ fi
 
 unset opt optn optm optv optt optk
 
-optv="$*" ; optt=""
+optv="$*" ; optt=()
 
 while [[ -n "$1" ]] ; do
   if [[ "$1" =~ \  && -n "$optn" ]] ; then
@@ -101,7 +101,7 @@ while [[ -n "$1" ]] ; do
     fi
   fi
 
-  optt="$optt $1" ; shift
+  optt+=("$1") ; shift
 done
 
 [[ -n "$optn" ]] && declare "$optn=true"
@@ -109,6 +109,6 @@ done
 unset opt optn optm optk
 
 # shellcheck disable=SC2015,SC2086
-[[ -n "$KEEP_OPTS" ]] && main $optv || main ${optt:1}
+[[ -n "$KEEP_OPTS" ]] && main $optv || main "${optt[@]}"
 
 ################################################################################
